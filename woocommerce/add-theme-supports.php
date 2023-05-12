@@ -10,4 +10,4 @@ function themes_support()
     add_theme_support('wc-product-gallery-slider');
     add_image_size( 'homepage-thumb', 400, 280, true );
 }
-add_action('after_setup_theme', 'themes_support');
+add_action('after_setup_theme', 'themes_support'); 
