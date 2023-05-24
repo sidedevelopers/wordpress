@@ -1,5 +1,7 @@
 <?php
 
+// https://developer.wordpress.org/reference/functions/add_theme_support/
+
 // Add themes Supports
 function themes_support()
 {
