@@ -12,8 +12,8 @@ function load_stylesheets()
 
     //Jquery version Load by wordpress default 
     wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.4.min.js', array( 'jquery' ), microtime(), true);
-    wp_enqueue_script('owl-js', get_template_directory_uri() . '/assets/OwlCarousel/dist/owl.carousel.js', null, microtime(), true);
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', null, microtime(), true);
+    wp_enqueue_script('owl-js', get_template_directory_uri() . '/assets/OwlCarousel/dist/owl.carousel.js', null, microtime(), true);
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/main-js/main.js', null, microtime(), true);
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
