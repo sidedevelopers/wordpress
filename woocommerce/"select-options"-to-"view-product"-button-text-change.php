@@ -1,4 +1,6 @@
-<!-- To change the button text "Select Options" to "View Product" of a variable product -->
+<?php
+
+// To change the button text "Select Options" to "View Product" of a variable product
 function change_select_options_text($text) {
     global $product;
 
