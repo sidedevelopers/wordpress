@@ -1,0 +1,7 @@
+//setup fresh wordpress
+1. install wordpress and delete all plugins, pages, posts, comments & themes 
+2. set permalink
+3. create a new theme and add files style.css and index.php and activate theme
+4. add plugin classic editor
+5. add pages home and more then go reading and set front page home
+

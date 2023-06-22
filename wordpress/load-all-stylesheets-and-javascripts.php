@@ -4,6 +4,7 @@
 function load_stylesheets()
 {
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), microtime(), 'all');
+    wp_enqueue_style('themify', get_template_directory_uri() . '/assets/themify-icons/themify-icons.css', array(), microtime(), 'all');
     wp_enqueue_style('font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('owl', get_template_directory_uri() . '/assets/OwlCarousel/dist/assets/owl.carousel.css', array(), microtime(), 'all');
     wp_enqueue_style('owl-theme', get_template_directory_uri() . '/assets/OwlCarousel/dist/assets/owl.theme.default.css', array(), microtime(), 'all');
