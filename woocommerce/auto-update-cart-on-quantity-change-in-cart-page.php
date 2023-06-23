@@ -1,6 +1,6 @@
 <?php
 
-//Auto Update Cart on quantity change in cart page
+//auto update cart on quantity change in cart page start
 add_action('wp_footer', 'cart_update_qty_script');
 function cart_update_qty_script()
 {
@@ -15,5 +15,6 @@ jQuery('div.woocommerce').on('change', '.qty', function() {
 <?php
     endif;
 }
+//auto update cart on quantity change in cart page end
 
 ?>

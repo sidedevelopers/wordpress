@@ -37,3 +37,25 @@
     <!-- Fetch Date & Link -->
     <a href="<?php echo esc_url( get_day_link( get_the_date('Y'), get_the_date('m'), get_the_date('d') ) ); ?>" title="<?php echo get_the_date('d M Y'); ?>"><?php echo get_the_date('d M Y'); ?></a>
 
+<!-- ################################################################################# -->
+
+<?php global $product; ?>
+or 
+<?php
+// Get the product object
+$product = wc_get_product(get_the_ID());
+?>
+
+<div class="price-div">
+
+<?php
+if ($product->is_on_sale()) {
+    echo '<span class="regular-price text-decoration-line-through">₹' . $product->get_regular_price() . '</span>';
+    echo '<span class="sale-price">₹' . $product->get_sale_price() . '</span>';
+}
+else{
+    echo '<span class="sale-price">₹' . $product->get_regular_price() . '</span>';
+}
+?>
+            
+</div>
