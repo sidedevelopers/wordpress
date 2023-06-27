@@ -3,9 +3,9 @@
     //Normally Blog Code Fetch
     while(have_posts()){
         the_post(); ?>
-        <img src="<?php the_post_thumbnail_url(); ?>">
+        <img src="<?php the_post_thumbnail_url(); ?>" />
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <?php the_excerpt(); ?> <!-- use echo get_the_excerpt() for remove p tag at time of fetch -->
+        <?php the_excerpt(); ?> <!-- use echo "get_the_excerpt()" for remove p tag at time of fetch -->
         <?php the_content(); ?>
         <?php echo wp_trim_words(get_the_content(), 14); ?>
         
@@ -31,11 +31,43 @@
 
 <!-- ################################################################################# -->
 
-    <!-- Fetch Author Name & Link -->
-    <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>">By <?php the_author(); ?></a>
+<!-- Fetch Author Name & Link -->
+<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>">By <?php the_author(); ?></a>
 
-    <!-- Fetch Date & Link -->
-    <a href="<?php echo esc_url( get_day_link( get_the_date('Y'), get_the_date('m'), get_the_date('d') ) ); ?>" title="<?php echo get_the_date('d M Y'); ?>"><?php echo get_the_date('d M Y'); ?></a>
+<!-- Fetch Date & Link -->
+<a href="<?php echo esc_url( get_day_link( get_the_date('Y'), get_the_date('m'), get_the_date('d') ) ); ?>" title="<?php echo get_the_date('d M Y'); ?>"><?php echo get_the_date('d M Y'); ?></a>
+
+<!-- ################################################################################# -->
+
+<?php
+	// Get the category name
+    $categories = get_the_category();
+    if ($categories) {
+	    foreach($categories as $category) {
+			$category_id = $category->term_id;
+?>
+		    <a href="<?php echo get_category_link($category_id); ?>">
+			    <span class="badge mb-3"><?php echo $category->name; ?></span>
+			</a>
+<?php
+		}
+	}
+    // N.B.-> For First category fetch use echo $category[0]->name;
+?>
+
+<!-- ################################################################################# -->
+
+<?php the_time(); ?>
+
+<?php
+// Last Updated x minuted ago start
+function altered_post_time_ago_function() {
+    return ( get_the_time('U') >= strtotime('-1 week') ) ? sprintf( esc_html__( 'Last updated %s ago', 'textdomain' ), human_time_diff( get_the_time ( 'U' ), current_time( 'timestamp' ) ) ) : get_the_date();
+    //After 1 week it prints the real date (-1 week)
+}
+add_filter( 'the_time', 'altered_post_time_ago_function' );
+// Last Updated x minuted ago end
+?>
 
 <!-- ################################################################################# -->
 
@@ -59,3 +91,5 @@ else{
 ?>
             
 </div>
+
+<!-- ################################################################################# -->

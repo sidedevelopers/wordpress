@@ -1,0 +1,86 @@
+/* fix buttons start */
+.woocommerce-Button,
+.woocommerce-button,
+.button {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border: 1px solid var(--color-primary) !important;
+}
+.woocommerce-Button:hover,
+.woocommerce-button:hover,
+.button:hover {
+    background-color: var(--color-secondary) !important;
+    border: 1px solid var(--color-secondary) !important;
+}
+
+/* fix buttons end */
+
+/* ####################################### */
+
+/* Fix input and text area start */
+.woocommerce form input,
+.woocommerce form textarea {
+    padding: 0.375rem 0.75rem;
+}
+/* Fix input and text area end */
+
+/* ####################################### */
+
+/* Fix select element start */
+.select2-container--default .select2-selection--single {
+    padding: 0.28rem 0.35rem;
+    height: 37px;
+    border: 1px solid #000;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 5px;
+    right: 7px;
+}
+/* Fix select element end */
+
+/* ####################################### */
+
+/* set height quanity input start */
+div.quantity input {
+    height: 38px;
+}
+/* set height quanity input end */
+
+/* ####################################### */
+
+/* give bottom margin in heading of related products in single page start */
+section.related.products h2 {
+    margin-bottom: 1rem;
+}
+/* give bottom margin in heading of related products in single page end */
+
+/* ####################################### */
+
+/* sale div background color change start */
+.woocommerce span.onsale {
+    background-color: var(--color-orange);
+}
+/* sale div background color change end */
+
+/* ####################################### */
+
+/* breadcrumb hover color change start */
+.woocommerce .woocommerce-breadcrumb a:hover {
+    color: var(--color-orange);
+}
+/* breadcrumb hover color change end */
+
+/* ####################################### */
+
+/* cart page return to shop button in middle & empty cart notification hide start */
+p.return-to-shop {
+    text-align: center;
+    margin-top: 2rem;
+}
+div.cart-empty.woocommerce-info {
+    display: none;
+}
+/* cart page return to shop button in middle & empty cart notification hide end */
+
+/* ####################################### */
