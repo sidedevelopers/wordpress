@@ -1,3 +1,17 @@
+<?php
+    wp_nav_menu(array(
+        'theme_location' => 'MainMenu',
+        'depth' => 2,
+        'container' => 'false',
+        'menu_class' => 'navbar-nav mx-auto mb-2 mb-lg-0',
+        'menu_id' => '',
+        'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+        'walker' => new WP_Bootstrap_Navwalker(),
+    ));
+?>
+
+<!-- ########################################################### -->
+
 <!-- Footer1 Menu start -->
 <?php
     wp_nav_menu(array(
