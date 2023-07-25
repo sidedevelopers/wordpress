@@ -22,3 +22,6 @@
 
 //Setup theme
 require get_template_directory() . '/inc/setup.php';
+
+//woo functions
+require get_template_directory() . '/inc/woo-functions.php';

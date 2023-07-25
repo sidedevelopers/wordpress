@@ -13,6 +13,10 @@ single.php
 <!-- Folders -->
 inc
 -> setup.php
+-> woo-functions.php
 
 template-parts
 -> content-*.php
+
+main-css
+-> main-woo.css
