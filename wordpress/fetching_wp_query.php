@@ -22,12 +22,16 @@
         'product_cat' => 'Best Sellers', //For woocommerce products category
         'posts_per_page' => 3,
         'order' => 'ASC' or 'DESC',
-        'post__not_in' => array( get_the_ID() ), //single.php post is not = current post 
+        'post__not_in' => array( get_the_ID() ), //single.php post is not = current post
+        'post__in' => array(219, 65, 59, 213, 53, 49, 44),
+		'orderby' => 'post__in',
     ));
     while($homepagePosts->have_posts()){
     $homepagePosts->the_post(); ?>
 
 <?php } wp_reset_postdata(); ?>
+
+
 
 <!-- ################################################################################# -->
 
