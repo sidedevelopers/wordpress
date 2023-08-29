@@ -19,3 +19,33 @@ function remove_dashboard_widgets_for_subscribers() {
     }
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets_for_subscribers');
+
+
+function add_profile_page_for_subscribers() {
+    add_menu_page(
+        'Profile',           // Page title
+        'Profile',           // Menu title
+        'read',              // Capability (subscribers can read)
+        'profile2',           // Page slug
+        'render_profile_page'// Callback function to render the page
+    );
+}
+add_action('admin_menu', 'add_profile_page_for_subscribers');
+
+function render_profile_page() {
+    ?>
+    <div class="wrap">
+        <h1>Welcome to Profile Page!</h1>
+        <p>This is a page dedicated to profile for subscribers.</p>
+
+        <?php
+
+        $user_id = get_current_user_id();
+
+        ?>
+
+
+
+    </div>
+    <?php
+}
