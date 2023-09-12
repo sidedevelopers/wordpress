@@ -193,3 +193,16 @@ if ($searchPosts->have_posts()) {
     echo 'No Jobs Found!';
 }
 wp_reset_postdata();?>
+
+
+<div class="text-center my-3">
+
+                    <?php
+// Generate pagination links
+$pagination_args = array(
+    'total' => $searchPosts->max_num_pages, // Total number of pages
+    'current' => $paged, // Current page
+);
+?>
+                    <?php echo paginate_links($pagination_args); ?>
+                </div>
