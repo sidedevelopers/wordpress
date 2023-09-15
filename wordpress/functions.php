@@ -25,3 +25,6 @@ require get_template_directory() . '/inc/setup.php';
 
 //woo functions
 require get_template_directory() . '/inc/woo-functions.php';
+
+//main functions
+require get_template_directory() . '/inc/main-functions.php';
