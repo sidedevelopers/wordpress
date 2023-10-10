@@ -68,6 +68,10 @@ if(!empty(get_the_post_thumbnail_url())){
 		}
 	}
     // N.B.-> For First category fetch use echo $category[0]->name;
+    // .single-category a:last-child span {
+    //     display: none;
+    // }
+    // for hide last , comma
 ?>
 
 <!-- ################################################################################# -->
