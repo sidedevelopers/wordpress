@@ -6,3 +6,11 @@
 
 <!-- theme directory url -->
 <?php echo get_template_directory_uri(); ?>/assets
+
+
+
+
+
+
+<!-- Site Name -->
+<?php echo get_bloginfo('name'); ?>
