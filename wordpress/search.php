@@ -1,4 +1,5 @@
-<?php $search_query = get_search_query(); ?>
+<?php $search_query = trim(get_search_query()); ?>
+<!-- trim prevent the space search -->
 
 <?php if (!empty($search_query)) { ?>
 
