@@ -14,8 +14,6 @@
 <!-- ################################################################################# -->
 
 <?php
-
-    //Fetch Product or Custom Post Type
     $homepagePosts = new WP_Query(array(
         'post_type' => 'post' or 'page' or 'product',
         'category_name' => 'Awards', //For blog post or custom post type category

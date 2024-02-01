@@ -1,20 +1,16 @@
-<h1><?php printf( esc_html__( 'Search Results for: %s', 'your-theme-textdomain' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+<?php $search_query = get_search_query(); ?>
 
-<?php if(have_posts()){ ?>
+<?php if (!empty($search_query)) { ?>
 
-<?php
-    while(have_posts()){
-    the_post(); ?>
+    <?php if (have_posts()) { ?>
 
-<?php  } wp_reset_postdata(); ?>
+    <!-- Search Content Here -->
+    
+    <?php } else { ?>
+        <?php printf( esc_html__( 'Search Results for: %s', 'theuktimes' ), $search_query ); ?>
+        Sorry, but nothing matched your search terms. Please try again with some different keywords.
+    <?php } ?>
 
-<div class="text-center my-3">
-    <?php echo paginate_links(); ?>
-</div>
-
-<?php
-    }
-    else{
-        echo '<h3>No Product Found!</h3>';
-    }
-?>
+<?php } else { ?>
+    Discover Breaking News!
+<?php } ?>
