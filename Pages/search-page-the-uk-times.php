@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-md-8">
 					
-					<?php $search_query = get_search_query(); ?>
+					<?php $search_query = trim(get_search_query()); ?>
+                    <!-- trim prevent the space search -->
 
                     <form role="search" method="GET" action="<?php echo home_url(); ?>">
                         <div class="input-group mt-3 mb-3">
