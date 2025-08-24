@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php get_header(); ?>
 
 <section class="page my-5">
     <div class="container-fluid">
@@ -15,4 +15,4 @@
     </div>
 </section>
 
-<?php include 'footer.php'; ?>
+<?php get_footer(); ?>
