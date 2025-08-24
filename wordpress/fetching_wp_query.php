@@ -7,6 +7,7 @@
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php the_excerpt(); ?> <!-- use echo "get_the_excerpt()" for remove p tag at time of fetch -->
         <?php the_content(); ?>
+        <?php the_category(', '); ?> <!-- Fetch Category -->
         <?php echo wp_trim_words(get_the_content(), 14); ?>
         
 <?php } wp_reset_postdata(); ?>
