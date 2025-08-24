@@ -1,5 +1,4 @@
-# wordpress
-
-Topics for improve wordpress
-
-1. https://www.sidedevelopers.com/wp-json/ wp-json fetch data
+=> Check Website is wordpress or not
+https://www.domainname.com/wp-admin/setup-config.php
+https://www.domainname.com/wp-admin/install.php
+https://www.domainname.com/wp-json/

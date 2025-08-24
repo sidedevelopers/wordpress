@@ -17,7 +17,7 @@ function load_stylesheets()
 
     //For Load Jquery custom version
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.7.0.min.js', '1.0', true);
+    wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.7.1.min.js', '1.0', true);
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', null, microtime(), true);
     wp_enqueue_script('owl-js', get_template_directory_uri() . '/assets/OwlCarousel/dist/owl.carousel.js', null, microtime(), true);
     wp_enqueue_script('slick-js', get_template_directory_uri() . '/assets/slick/slick/slick.min.js', null, microtime(), true);

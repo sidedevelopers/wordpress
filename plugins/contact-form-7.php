@@ -1,14 +1,24 @@
-Name:
-[text* Name class:form-control class:cf2-control class:rounded-0 placeholder "Name"]
+<!-- Pdf download after contact form submit after <?php get_footer(); ?> in same page -->
+<script>
+	document.addEventListener('wpcf7mailsent', function(event) {
+    	if (event.detail.contactFormId === 79) { // Use the numeric ID from your form URL
+			const pdfUrl = 'https://www.bregano.in/wp-content/themes/bregano/img/Bregano_Catalogue.pdf';
+			const link = document.createElement('a');
+			link.href = pdfUrl;
+			link.download = 'Bregano_Catalogue.pdf'; // Set desired filename
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+		}
+	});
+</script>
 
-Email:
-[email* Email class:form-control class:cf2-control class:rounded-0 placeholder "Email"]
-
-Subject:
-[text* Subject class:form-control class:cf2-control class:rounded-0 placeholder "Subject"]
-
-Message:
-[textarea* Message x8 class:form-control class:cf2-control class:rounded-0 placeholder "Message"]
-
-Submit Button
-[submit class:btn class:btn-cf2 class:rounded-1 "SEND MESSAGE"]
+<style>
+/* for checkbox or radio button next line per item in pc devices */
+@media only screen and (min-width: 768px) {
+    .radiocheckbox .wpcf7-list-item {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+</style>
