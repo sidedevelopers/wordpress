@@ -53,28 +53,6 @@ if(!empty(get_the_post_thumbnail_url())){
 
 <!-- ################################################################################# -->
 
-<?php
-	// Get the category name
-    $categories = get_the_category();
-    if ($categories) {
-	    foreach($categories as $category) {
-			$category_id = $category->term_id;
-?>
-		    <a href="<?php echo get_category_link($category_id); ?>">
-			    <span class="badge mb-3"><?php echo $category->name; ?></span>
-			</a>
-<?php
-		}
-	}
-    // N.B.-> For First category fetch use echo $category[0]->name;
-    // .single-category a:last-child span {
-    //     display: none;
-    // }
-    // for hide last , comma
-?>
-
-<!-- ################################################################################# -->
-
 <?php the_time(); ?>
 
 <?php
