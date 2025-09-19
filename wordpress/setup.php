@@ -11,8 +11,8 @@ function load_stylesheets()
     wp_enqueue_style('slick-css', get_template_directory_uri() . '/assets/slick/slick/slick.css', array(), microtime(), 'all');
     wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/assets/slick/slick/slick-theme.css', array(), microtime(), 'all');
     wp_enqueue_style('aos-css', get_template_directory_uri() . '/assets/aos/dist/aos.css', array(), microtime(), 'all');
-    wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/main-css/main.css', false, microtime(), 'all');
-    wp_enqueue_style('main-woo-css', get_template_directory_uri() . '/assets/main-css/main-woo.css', false, microtime(), 'all');
+    wp_enqueue_style('main-css', get_template_directory_uri() . '/inc/main.css', false, microtime(), 'all');
+    wp_enqueue_style('woo-css', get_template_directory_uri() . '/inc/woo.css', false, microtime(), 'all');
     wp_enqueue_style('main_style', get_stylesheet_uri());
 
     //For Load Jquery custom version
