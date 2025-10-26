@@ -1,0 +1,95 @@
+/* Buttons start */
+.button{
+	background-color: var(--color-secondary) !important;
+	border: 1px solid var(--color-secondary) !important;
+	color: var(--color-primary) !important;
+}
+.button:hover{
+	background-color: var(--color-tertiary) !important;
+}
+.wc-block-components-button{
+	background-color: var(--color-secondary);
+	border: 1px solid var(--color-secondary);
+	color: var(--color-primary);
+}
+/* Buttons End */
+
+/* #################################################### */
+
+/* Breadcrumb start */
+.woocommerce-breadcrumb a {
+    color: var(--color-primary) !important;
+	font-weight: 500;
+}
+/* custom breadcrumb for archive page if need */
+.archive-breadcrumb .woocommerce-breadcrumb {
+    color: #fff;
+}
+.archive-breadcrumb .woocommerce-breadcrumb a {
+    color: var(--color-primary) !important;
+}
+/* Breadcrumb End */
+
+/* #################################################### */
+
+/* Archive Products Start */
+.woocommerce-loop-product__title{
+	color: #000;
+}
+.woocommerce-loop-product__title:hover{
+	color: var(--color-primary);
+}
+.woocommerce span.onsale{
+	background-color: var(--color-primary);
+}
+/* Archive Products End */
+
+/* #################################################### */
+
+/* single product page start */
+.product_meta a {
+    color: var(--color-primary);
+}
+.product_meta span {
+    display: block;
+}
+.woocommerce .quantity .qty {
+    height: 2.3em;
+}
+/* single product page end */
+
+/* #################################################### */
+
+/* message start */
+
+/* message end */
+
+/* cart page start */
+/* if need */
+.wc-block-components-product-name{
+	color: var(--color-tertiary);
+}
+/* cart page end */
+
+/* dashboard start */
+
+/* dashboard end */
+
+/* Optional Start */
+
+/* For archive page breadcrumb hide */
+nav.woocommerce-breadcrumb {
+    display: none;
+}
+
+/* For hide only header title (also category content hide if not define h1) */
+header.woocommerce-products-header h1 {
+    display: none;
+}
+
+/* use if content is display */
+header.woocommerce-products-header .term-description{
+	margin-bottom: 3rem;
+}
+
+/* Optional End */
