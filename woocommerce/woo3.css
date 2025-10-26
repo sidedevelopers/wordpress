@@ -65,6 +65,10 @@
 /* message end */
 
 /* cart page start */
+/* empty cart icon color change */
+.wc-block-cart__empty-cart__title.with-empty-cart-icon:before {
+  background-color: var(--color-primary) !important;
+}
 /* if need */
 .wc-block-components-product-name{
 	color: var(--color-tertiary);
@@ -72,7 +76,25 @@
 /* cart page end */
 
 /* dashboard start */
-
+nav.woocommerce-MyAccount-navigation ul {
+	list-style: none;
+  	padding-left: 0;
+}
+nav.woocommerce-MyAccount-navigation ul li {
+  	border: 1px solid #dee2e6;
+}
+nav.woocommerce-MyAccount-navigation ul li a {
+  	display: block;
+  	padding: 0.4rem 0.5rem;
+}
+nav.woocommerce-MyAccount-navigation ul li.is-active {
+  	border: 1px solid var(--color-primary);
+}
+nav.woocommerce-MyAccount-navigation ul li.is-active a {
+  	background-color: var(--color-primary);
+  	color: #fff;
+  	border: 1px solid var(--color-primary);
+}
 /* dashboard end */
 
 /* Optional Start */
